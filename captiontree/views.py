@@ -7,3 +7,5 @@ def about(request):
     return HttpResponse("about me")
 def css_renderer(request, filename):
     return render(request, filename + '.css', {}, content_type="text/css")
+def pricing(request):
+    return render(request,'pricing.html')

@@ -1,23 +1,7 @@
-<!doctype html>
-<html lang="en">
-{% load static %}
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.98.0">
-    <title>CaptionTree</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans&family=Pacifico&family=Poppins:wght@400&display=swap"
-          rel="stylesheet">
-    <link href="{% static '/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static '/css/css.min.css' %}" rel="stylesheet">
+{% extends 'basic.html' %}
 
-
-    <style>
+{% block title %} Home {% endblock %}
+    {% block css %}
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -71,18 +55,32 @@
 
 .banner-img{
     width: 100%;
-    height: 600px;
+    height: 450px;
     border-radius: 30px;
     overflow: hidden;
 
     background-size: cover; /* or contain depending on what you want */
   background-position: center center;
+
+}
+.card-full{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    overflow: hidden;
+
+    background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-color: #fff0f3;
 }
 p{
 font-size:20px;
 text-align: justify;
 
 
+}
+bg-card{
+    background-color:#fff0f3;
 }
 h1{
 font-size:40px;
@@ -92,60 +90,36 @@ bg-cherry{
     background-color:#ff6b87;
 }
 
-    </style>
+
+   {% endblock %}
+
+
+{% block body %}
+{% load static %}
 
 
     <!-- Custom styles for this template -->
-    <link href="{% static '/css/css.min.css' %}" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div class="container py-3">
-    <header>
-        <div class="d-flex flex-column flex-md-row align-items-center px-2 pb-3 mb-4 border-bottom">
-            <nav class="navbar">
-                <a class="navbar-brand" href="#" style="font-size:35px; font-family: 'Pacifico', cursive;">
-                    <!--    <img src="{% static 'media/captiontree.png' %}" width="auto" height="50" class="d-inline-block align-top" alt="">-->
-                    Caption<span style="color:#ff6b87; ">Tree</span>
-                </a></nav>
 
-            <!--            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">-->
 
-            <!--                -->
-            <!--                <svg data-url_root="{% static 'media/captiontree_logo.png' %}" width="40" height="32" class="me-2" viewBox="0 0 118 94"-->
-            <!--                     role="img"><title>Bootstrap</title>-->
-            <!--                    <path fill-rule="evenodd" clip-rule="evenodd"-->
-            <!--                          d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"-->
-            <!--                          fill="currentColor"></path>-->
-            <!--                </svg>-->
-            <!--                <span class="fs-4">CaptionTree</span>-->
-            <!--            </a>-->
 
-            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">Contact Us</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">About Us</a>
-                <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a>
-                <a class="py-2 text-dark text-decoration-none" href="#">Pricing</a>
-            </nav>
-        </div>
-    </header>
-</div>
 <div class="container">
     <div class="w-100 d-flex p-5 banner-img" id="" style="background-image: url({% static 'media/banner3.jpg' %});">
         <div class="content text-left">
-            <p class="text-white fw-normal display-5">Caption your YouTube video</p>
-            <p class="text-danger fw-normal display-3">JUST FOR 7$</p>
-            <p class="text-white fw-normal display-5">& many more.</p>
-            <div class="py-5">
+            <p class="text-white fw-normal display-6">Caption your YouTube video</p>
+            <p class="text-danger fw-normal display-4">JUST FOR 7$</p>
+            <p class="text-white fw-normal display-6">& more...</p>
+            <div class="py-5" >
+<a href="pricing">
                 <button type="button" class="btn btn-outline-light"
                         style="height:50px; width:160px; border-radius:10px; font-size:20px;">View Pricing
-                </button>
+                </button></a>
             </div>
 
         </div>
     </div>
     <hr>
     <div class="container p-4 ">
-        <h1>WHAT WE DO?</h1>
+        <h1>What we do?</h1>
         <p>We provide two services that you can choose from<br>
             1. Professionally made captions for your videos/podcasts. <br>
             2. Editing short videos/reels/TikToks. <br><br>
@@ -158,8 +132,8 @@ bg-cherry{
 
     </div>
     <hr>
-    <div class="container p-4 banner-img bg-light p-5">
-        <h1 class="my-3">WHY USE CAPTIONS ON YOUR VIDEOS?</h1>
+    <div class="container p-4">
+        <h1 class="my-3">Why use captions on your videos?</h1>
         <p>Adding manual captions to your videos can be a critical part of your video content strategy. <br>
             • Your content will appear in more search results (Improved SEO). <br>
             • Provides clarity on technical terminology (automatic captions contain many errors on technical terms and
@@ -172,6 +146,8 @@ bg-cherry{
     </div>
 
 
+
+
     <!--  <div class="overflow-hidden p-3 p-md-5 m-md-3 text-center banner-img " id="" style="background-image: url({% static 'media/banner_img.jpg' %})">-->
     <!--    <div class=" col-md-5 p-lg-5 mx-auto my-3" style="color: white;">-->
     <!--      <h3 class="display-6 fw-normal">LOOKING FOR SUBTITLES FOR YOUR VIDEOS?</h3>-->
@@ -182,7 +158,7 @@ bg-cherry{
 
     <!--  </div>-->
 
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+    <div class="d-md-flex flex-md-equal w-100 py-5 my-md-3 ps-md-3">
         <div class="bg-dark me-md-3 py-4 px-md-5 text-center text-white overflow-hidden"
              style="border-radius: 30px; height:300px;">
             <div class="my-3 p-5">
@@ -191,7 +167,7 @@ bg-cherry{
             </div>
 
         </div>
-        <div class="bg-light me-md-3 py-4 p-5  pt-md-5 px-md-5 text-center overflow-hidden"
+        <div class="bg-card me-md-3 py-4 p-5  pt-md-5 px-md-5 text-center overflow-hidden"
              style="border-radius: 30px; height:300px;">
             <div class="my-3 p-3">
                 <h1 class="display-5">12</h1>
@@ -201,7 +177,7 @@ bg-cherry{
     </div>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-        <div class="bg-light me-md-3 py-4 px-md-5 text-center overflow-hidden"
+        <div class="bg-card me-md-3 py-4 px-md-5 text-center overflow-hidden"
              style="border-radius: 30px; height:300px;">
             <div class="my-3 py-3">
                 <h1 class="display-5">50+</h1>
@@ -217,9 +193,56 @@ bg-cherry{
             </div>
         </div>
     </div>
-<div class="container py-5">
+
+    <div class="container py-5 justify-content-center">
+        <h1>Creators that Trust us</h1>
+
+
+<div class="text-center p-4">
+        <a href="https://www.youtube.com/c/MaxMaher?app=desktop" target=”_blank” style="margin-top: 50px;">
+            <img class="rounded-circle"
+                 src="https://obpedia.com/wp-content/uploads/2022/02/MAX1.jpg"
+                 alt="Generic placeholder image" width="140" height="140" >
+
+        </a>
+        <h5 style="color:red">Max Maher</h5>
+    <h6>800k+ subcribers on YouTube</h6>
+</div>
+
+    </div>
+
+    <div class="container justify-content-center">
+        <h1>Captions for the Platforms</h1>
+        <div class="container p-5 text-center">
+  <div class="row">
+    <div class="col-2">
+      <img src="{% static 'media/yt.png' %}" width="80" height="80">
+    </div>
+    <div class="col-2">
+      <img src="{% static 'media/spotify.png' %}"  width="80" height="80">
+    </div>
+    <div class="col-2">
+      <img src="{% static 'media/insta.png' %}"  width="80" height="80">
+    </div>
+      <div class="col-2">
+      <img src="{% static 'media/tiktok.png' %}"  width="80" height="80">
+    </div>
+    <div class="col-2">
+      <img src="{% static 'media/gpod.png' %}"  width="80" height="80">
+    </div>
+    <div class="col-2">
+      <img src="{% static 'media/fb.png' %}"  width="80" height="80">
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+
+<div class="container">
     <div >
-        <h1>MEET THE FOUNDERS</h1>
+        <h1>Meet the Founders</h1>
     </div>
 
     <div class="row my-5 py-5">
@@ -230,77 +253,27 @@ bg-cherry{
             <h2>Tarun</h2>
 <!--            <h7 class="text-muted">CTO</h7>-->
             <p>Hey there, I'm Tarun Bijanapally, a student of IIT Delhi, India. I founded CaptionTree to solve creators' post production problems by helping them with the best in class service at the lowest possible price. As subtitling videos can be expensive for many creators, my vision with CaptionTree is to make it the perfect place for creators to improve their reach using high quality captions and short videos. We have a high quality team and build tech that will deliver accurate results.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+<!--            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>-->
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-6 px-5">
-            <img class="rounded-circle"
-                 src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                 alt="Generic placeholder image" width="140" height="140">
+            <img class="rounded-circle bg-dark"
+                 src="{% static 'media/adarsh.jpeg' %}"
+                 alt="Generic placeholder image" width="140" height="140" style="object-fit: contain">
             <h2>Adarsh</h2>
 <!--            <h7 class="text-muted">CEO, CTO</h7>-->
             <p>Hey there, I'm Tarun Bijanapally, a student of IIT Delhi, India. I founded CaptionTree to solve creators' post production problems by helping them with the best in class service at the lowest possible price. As subtitling videos can be expensive for many creators, my vision with CaptionTree is to make it the perfect place for creators to improve their reach using high quality captions and short videos. We have a high quality team and build tech that will deliver accurate results.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+<!--            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>-->
         </div><!-- /.col-lg-4 -->
 
     </div>
     </div>
 
+{% endblock %}
 
-    <footer class="container py-5">
-        <div class="row">
-            <div class="col-12 col-md">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
-                     viewBox="0 0 24 24"><title>Product</title>
-                    <circle cx="12" cy="12" r="10"/>
-                    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
-                </svg>
-                <small class="d-block mb-3 text-muted">&copy; 2017–2022</small>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Features</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary" href="#">Cool stuff</a></li>
-                    <li><a class="link-secondary" href="#">Random feature</a></li>
-                    <li><a class="link-secondary" href="#">Team feature</a></li>
-                    <li><a class="link-secondary" href="#">Stuff for developers</a></li>
-                    <li><a class="link-secondary" href="#">Another one</a></li>
-                    <li><a class="link-secondary" href="#">Last time</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary" href="#">Resource name</a></li>
-                    <li><a class="link-secondary" href="#">Resource</a></li>
-                    <li><a class="link-secondary" href="#">Another resource</a></li>
-                    <li><a class="link-secondary" href="#">Final resource</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>Resources</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary" href="#">Business</a></li>
-                    <li><a class="link-secondary" href="#">Education</a></li>
-                    <li><a class="link-secondary" href="#">Government</a></li>
-                    <li><a class="link-secondary" href="#">Gaming</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md">
-                <h5>About</h5>
-                <ul class="list-unstyled text-small">
-                    <li><a class="link-secondary" href="#">Team</a></li>
-                    <li><a class="link-secondary" href="#">Locations</a></li>
-                    <li><a class="link-secondary" href="#">Privacy</a></li>
-                    <li><a class="link-secondary" href="#">Terms</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+{% block jss %}
 
 
     <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
 
+{% endblock %}
 
-</body>
-</html>

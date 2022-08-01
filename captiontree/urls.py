@@ -23,6 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index,name="index"),
     path('about',views.about,name='about'),
+    path('pricing',views.pricing,name='pricing')
+
     # path('css/ok.css', TemplateView.as_view(template_name='ok.css')),
     # path('css/<str:filename>.css', views.css_renderer),
 ]

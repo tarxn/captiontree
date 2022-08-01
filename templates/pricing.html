@@ -1,0 +1,206 @@
+{% extends 'basic.html' %}
+
+{% block title %} Pricing {% endblock %}
+    {% block css %}
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+      bg-cherry{
+    background-color:#ff6b87;
+}
+p{
+  font-size:20px;
+}
+
+      .border-cherry{--bs-border-opacity:1;border-color:rgba(var(--bs-cherry-rgb),var(--bs-border-opacity))!important}
+      .btn-outline-cherry{--bs-btn-color:#ff6b87;--bs-btn-border-color:#ff6b87;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#ff6b87;--bs-btn-hover-border-color:#ff6b87;--bs-btn-focus-shadow-rgb:13,110,253;--bs-btn-active-color:#fff;--bs-btn-active-bg:#ff6b87;--bs-btn-active-border-color:#ff6b87;--bs-btn-active-shadow:inset 0 3px 5px rgba(0, 0, 0, 0.125);--bs-btn-disabled-color:#ff6b87;--bs-btn-disabled-bg:transparent;--bs-gradient:none}
+      .btn-cherry{--bs-btn-color:#fff;--bs-btn-bg:#ff6b87;--bs-btn-border-color:#ff6b87;--bs-btn-hover-color:#fff;--bs-btn-hover-bg:#ff6b87;--bs-btn-hover-border-color:#ff6b98;--bs-btn-focus-shadow-rgb:49,132,253;--bs-btn-active-color:#fff;--bs-btn-active-bg:#ff6b87;--bs-btn-active-border-color:#ff6b87;--bs-btn-active-shadow:inset 0 3px 5px rgba(0, 0, 0, 0.125);--bs-btn-disabled-color:#fff;--bs-btn-disabled-bg:#ff6b87;--bs-btn-disabled-border-color:#ff6b87}
+{% endblock %}
+
+
+{% block body %}
+{% load static %}
+
+    <!-- Custom styles for this template -->
+
+
+<div class="container">
+  <main>
+     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-6 fw-normal">Price for Short Videos</h1>
+      <p class="fs-5 text-muted">We edit shorts out of your videos. You can outsource your Youtube Shorts/Reels/TikToks to us.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+
+
+
+
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal text-bold"> Basic</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15<small class="text-muted fw-light">/short video</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><p>Upto 30 videos/month</p></li>
+<!--              <li>24 hour delivery time</li>-->
+<!--              <li>High quality edited videos</li>-->
+<!--              <li>Negotiable price through email</li>-->
+            </ul>
+<button type="button" class="w-100 btn btn-lg btn-cherry">Request Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$400<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><p>30-60 short videos</p></li>
+<!--              <li>10 GB of storage</li>-->
+<!--              <li></li>-->
+<!--              <li>Help center access</li>-->
+            </ul>
+<button type="button" class="w-100 btn btn-lg btn-cherry">Request Order</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm bg-cherry">
+          <div class="card-header py-3 text-white bg-cherry bg-cherry">
+            <h4 class="my-0 text-dark fw-normal">Elite</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$750<small class="text-muted fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li><p>60+ short videos</p></li>
+<!--              <li>15 GB of storage</li>-->
+<!--              <li>Phone and email support</li>-->
+<!--              <li>Help center access</li>-->
+            </ul>
+<button type="button" class="w-100 btn btn-lg btn-cherry">Request Order</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-6 fw-normal">Compare Captions Prices</h1>
+      <p class="fs-5 text-muted">We don't compromise on quality while delivering service at the aggressive price. Our captions are 99% accurate.</p>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">CaptionTree</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+              <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+    </div>
+{% endblock %}
+
+{% block jss %}
+ <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+
+{% endblock %}
